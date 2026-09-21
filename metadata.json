@@ -1,0 +1,6 @@
+{
+  "name": "Renaissance Modern Polytechnic Mbaukwu",
+  "description": "Official portal and website for Renaissance Modern Polytechnic Mbaukwu featuring course catalogs, student portals, academic admissions, and campus events gallery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

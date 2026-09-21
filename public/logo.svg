@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Arc path for text -->
+    <path id="textArc" d="M 65,260 A 190,190 0 0,1 435,260" fill="none" />
+    <linearGradient id="pencilGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#B91C1C"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="100%" stop-color="#FDE047"/>
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Circular background -->
+  <circle cx="250" cy="250" r="240" fill="#FFFFFF"/>
+
+  <!-- Outer Green Cogwheel / Gear Ring -->
+  <g id="gear-cogwheel" fill="#0D7A42">
+    <!-- Cogwheel teeth around the upper arc -->
+    <!-- Center 250, 250, radius ~ 210, width teeth -->
+    <path d="
+      M 50,265 
+      L 35,245 L 45,215 L 65,218 
+      A 210,210 0 0,1 78,175 
+      L 60,152 L 80,128 L 102,138 
+      A 210,210 0 0,1 128,105 
+      L 120,80 L 148,64 L 165,80 
+      A 210,210 0 0,1 202,60 
+      L 204,32 L 236,30 L 244,56 
+      A 210,210 0 0,1 256,56 
+      L 264,30 L 296,32 L 298,60 
+      A 210,210 0 0,1 335,80 
+      L 352,64 L 380,80 L 372,105 
+      A 210,210 0 0,1 398,138 
+      L 420,128 L 440,152 L 422,175 
+      A 210,210 0 0,1 435,218 
+      L 455,215 L 465,245 L 450,265 
+      L 415,265 
+      A 168,168 0 0,0 85,265 
+      Z" 
+      filter="url(#subtleShadow)"
+    />
+  </g>
+
+  <!-- White curved institution text on green banner -->
+  <text fill="#FFFFFF" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="21" letter-spacing="3.2">
+    <textPath href="#textArc" startOffset="50%" text-anchor="middle">
+      RENAISSANCE MODERN POLYTECHNIC
+    </textPath>
+  </text>
+
+  <!-- Central Emblem Interior -->
+  <g id="tools-and-crest" transform="translate(0, -10)">
+    <!-- 1. TECHNICAL PENCIL (Angled left behind the wrench) -->
+    <g transform="translate(200, 270) rotate(-35) translate(-200, -270)">
+      <!-- Pencil Body -->
+      <polygon points="186,130 214,130 214,295 186,295" fill="url(#pencilGrad)" stroke="#991B1B" stroke-width="2"/>
+      <line x1="195" y1="130" x2="195" y2="295" stroke="#FCA5A5" stroke-width="2" opacity="0.6"/>
+      <line x1="205" y1="130" x2="205" y2="295" stroke="#7F1D1D" stroke-width="2" opacity="0.6"/>
+      <!-- Pencil Wood Cone -->
+      <polygon points="186,130 214,130 200,85" fill="#F59E0B" stroke="#D97706" stroke-width="1.5"/>
+      <!-- Graphite Tip -->
+      <polygon points="195,100 205,100 200,85" fill="#18181B"/>
+    </g>
+
+    <!-- 2. CLAW HAMMER (Angled right behind the wrench) -->
+    <g transform="translate(300, 270) rotate(32) translate(-300, -270)">
+      <!-- Hammer Handle -->
+      <rect x="290" y="160" width="20" height="150" rx="4" fill="#1E293B" stroke="#0F172A" stroke-width="2"/>
+      <rect x="288" y="270" width="24" height="40" rx="3" fill="#334155"/>
+      <!-- Hammer Head -->
+      <path d="M 260,165 L 340,165 L 345,150 L 335,145 L 305,145 C 300,120 280,110 260,112 C 270,122 276,135 274,145 L 260,148 Z" fill="#18181B" stroke="#0F172A" stroke-width="2"/>
+      <!-- Striking face accent -->
+      <line x1="340" y1="150" x2="340" y2="165" stroke="#94A3B8" stroke-width="3"/>
+    </g>
+
+    <!-- 3. CENTER DOUBLE-ENDED OPEN WRENCH / SPANNER (Standing vertically) -->
+    <g id="wrench">
+      <!-- Upper jaw -->
+      <path d="M 215,135 
+               C 215,105 230,85 250,85 
+               C 270,85 285,105 285,135 
+               L 268,140 
+               C 265,122 258,115 250,115 
+               C 242,115 235,122 232,140 
+               Z" 
+            fill="#18181B" stroke="#0F172A" stroke-width="2"/>
+      <!-- Wrench shaft -->
+      <rect x="238" y="135" width="24" height="150" rx="4" fill="#18181B" stroke="#0F172A" stroke-width="2"/>
+      <!-- Shaft highlight -->
+      <line x1="250" y1="145" x2="250" y2="280" stroke="#334155" stroke-width="4"/>
+    </g>
+  </g>
+
+  <!-- 4. OPEN BOOK AT BASE -->
+  <g id="open-book" transform="translate(0, -10)">
+    <!-- Book Spine & Shadow -->
+    <path d="M 250,335 C 230,350 140,360 20,345 L 18,368 C 140,385 230,375 250,360 C 270,375 360,385 482,368 L 480,345 C 360,360 270,350 250,335 Z" fill="#7F1D1D" stroke="#500724" stroke-width="2"/>
+
+    <!-- Book Pages Background (Golden Yellow Page Rim) -->
+    <path d="M 250,325 C 230,338 140,348 25,335 L 22,358 C 140,372 230,362 250,350 C 270,362 360,372 478,358 L 475,335 C 360,348 270,338 250,325 Z" fill="url(#goldGrad)" stroke="#CA8A04" stroke-width="2"/>
+
+    <!-- Left Open Page -->
+    <path d="M 250,325 C 220,300 130,300 25,325 L 30,348 C 130,328 220,328 250,345 Z" fill="#FFFBEB" stroke="#CA8A04" stroke-width="2"/>
+
+    <!-- Right Open Page -->
+    <path d="M 250,325 C 280,300 370,300 475,325 L 470,348 C 370,328 280,328 250,345 Z" fill="#FFFBEB" stroke="#CA8A04" stroke-width="2"/>
+
+    <!-- Orange Bookmark Patch on Left Page (from original crest) -->
+    <rect x="65" y="318" width="55" height="16" rx="3" fill="#EA580C"/>
+
+    <!-- Green Bookmark Patch on Right Page (from original crest) -->
+    <rect x="365" y="318" width="65" height="16" rx="3" fill="#16A34A"/>
+
+    <!-- Page Text Line accents -->
+    <line x1="140" y1="316" x2="230" y2="316" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+    <line x1="135" y1="326" x2="235" y2="326" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+    <line x1="150" y1="335" x2="230" y2="335" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+
+    <line x1="270" y1="316" x2="350" y2="316" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+    <line x1="265" y1="326" x2="355" y2="326" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+    <line x1="270" y1="335" x2="340" y2="335" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- 5. BASE BANNER / INITIALS & MOTTO -->
+  <g id="bottom-ribbon">
+    <path d="M 80,410 L 420,410 L 400,445 L 250,445 L 100,445 Z" fill="#0D7A42" stroke="#064E3B" stroke-width="2"/>
+    <text x="250" y="433" fill="#FDE047" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="18" letter-spacing="4" text-anchor="middle">
+      MBAUKWU • ANAMBRA STATE
+    </text>
+    <text x="250" y="475" fill="#1E293B" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="14" letter-spacing="2.5" text-anchor="middle">
+      TECHNOLOGY FOR SELF-RELIANCE
+    </text>
+  </g>
+</svg>
